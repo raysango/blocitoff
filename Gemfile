@@ -14,6 +14,8 @@ end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '3.2.0.2'
+# Authorization system
+gem 'pundit'
 # User authentication system
 gem 'devise'
 # Hiding ENV
