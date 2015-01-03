@@ -1,10 +1,11 @@
-<div class="media">
+<%= content_tag :div, class: 'media', id: "item-#{item.id}" do %>
         <div class="media-body">
           <h4 class="media-heading">
             <%= item.name %>
           </h4>
           <small>
-            submitted <%= time_ago_in_words(item.created_at) %> ago
+            <%= link_to "Completed", list_item_path(item.list, item), method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
+            submitted <%= time_ago_in_words(item.created_at) %> ago,<br><%="#{7 - item.days_left}" %>days left
           </small></br>
         </div>
-      </div>
+<%end%>

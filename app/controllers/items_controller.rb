@@ -1,8 +1,8 @@
 class ItemsController < ApplicationController
-  def index
-  end
+  respond_to :html, :js
+  
   def item_params
-    params.require(:item).permit(:name, :list_id)
+    params.require(:item).permit(:name, :list_id, :id)
   end
   
   def create
@@ -18,13 +18,17 @@ class ItemsController < ApplicationController
       redirect_to @list
     end
   end
-
-  def show
-  end
-
-  def new
-  end
-
-  def edit
+  
+  def destroy
+    @list = List.find(params[:list_id])
+    @item = @list.items.find(params[:id])
+    if @item.destroy
+      flash[:notice]= "Item completed and removed from your list"
+    else
+      flash[:error]= "Item couldn't be removed try again"
+    end
+    respond_with(@item) do |format|
+      format.html { redirect_to[@list]}
+     end
   end
 end
