@@ -5,7 +5,7 @@
           </h4>
           <small>
             <%= link_to "Completed", list_item_path(item.list, item), method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
-            submitted <%= time_ago_in_words(item.created_at) %> ago,<br><%="#{7 - item.days_left}" %>days left
+            submitted <%= time_ago_in_words(item.created_at) %> ago,<br><%="#{7 - item.days_left}" %> days left
           </small></br>
         </div>
 <%end%>
