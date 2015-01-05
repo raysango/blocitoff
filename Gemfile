@@ -5,10 +5,12 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.7'
 # Use sqlite3 as the database for Active Record
 group :production do
+  gem 'capistrano-rails', '~> 1.1.1'
   gem 'pg'
   gem 'rails_12factor'
 end
 group :development do
+  gem 'capistrano-rails', '~> 1.1.1'
   gem 'sqlite3'
 end
 # Use SCSS for stylesheets
