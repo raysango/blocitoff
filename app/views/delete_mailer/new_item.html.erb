@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>One of your items in to-do list "<%= @list.title %>" will be deleted in one day </h1>
+    <p>
+      <%= @item.name %>
+    </p>
+    <p>
+      <%= link_to "View item on site", list_url(@list, anchor: "item-#{@item.id}") %>
+    </p>
+  </body>
+</html>

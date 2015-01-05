@@ -1,7 +1,9 @@
 class ListsController < ApplicationController
  before_action :authenticate_user!
   def show
-   @list = current_user.list
+    @list = current_user.list
+    @user = @list.user
+    @list.send_delete_emails
     @items = @list.items
 
   end
