@@ -1,2 +1,29 @@
-<h1>Welcome to Blocitoff</h1>
-<p>Where you can add to-do items that you want to remember</p>
+<br/>
+<div class="jumbotron">
+  <h1>Blocitoff</h1>
+  <p>Blocitoff made it simple to track your daily to-do items</p>
+  <p>
+    <% if current_user %>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
+    <%else%>
+    <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+    <%end%>
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Access from any where!</h2>
+    <p>Blocitoff will keep all your tasks in one place.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>It's all about dead lines</h2>
+    <p>Blocitoff will track your dead lines.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Put your dreams in a list!</h2>
+    <p>Blocitoff can be used to update your bucket list .</p>
+  </div>
+</div>
+
