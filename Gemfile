@@ -21,6 +21,11 @@ gem 'bootstrap-sass', '3.2.0.2'
 gem 'pundit'
 # User authentication system
 gem 'devise'
+#Uploading Images
+gem 'carrierwave'
+gem 'mini_magick', '~>3.5.0'
+#Image Storage
+gem 'fog'
 # Hiding ENV
 gem 'figaro', '1.0'
 # Adding Fake records
