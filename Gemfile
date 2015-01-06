@@ -8,6 +8,7 @@ group :production do
   gem 'capistrano-rails', '~> 1.1.1'
   gem 'pg'
   gem 'rails_12factor'
+  gem 'whenever', :require => false
 end
 group :development do
   gem 'capistrano-rails', '~> 1.1.1'
